@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.*;
 
 /**
+ * Class to detect the most frequently used colour in an image.
  * Created by soheb on 28/06/2015.
  */
 public class FrequentColourImage {
@@ -46,7 +47,6 @@ public class FrequentColourImage {
     }
 
     public static int[] getRGBArr(int pixel) {
-        int alpha = (pixel >> 24) & 0xff;
         int red = (pixel >> 16) & 0xff;
         int green = (pixel >> 8) & 0xff;
         int blue = (pixel) & 0xff;

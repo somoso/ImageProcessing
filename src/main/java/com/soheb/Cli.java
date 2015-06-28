@@ -7,15 +7,13 @@ import org.apache.commons.cli.*;
  */
 public class Cli {
 
-    private Options options;
-
     private boolean loggingAllowed;
     private boolean parallel;
 
     public Cli(String[] args) {
         loggingAllowed = false;
         parallel = true;
-        options = new Options();
+        Options options = new Options();
         options.addOption("v", false, "Verbose (Enable logging output)");
         options.addOption("s", true, "Enable single processing of jobs");
         CommandLineParser parser = new DefaultParser();
