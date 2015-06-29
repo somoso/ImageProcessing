@@ -7,7 +7,11 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * Class to detect the most frequently used colour in an image.
+ * Detects the most frequently used colour in an image.
+ *
+ * A modified version of this code:
+ * http://stackoverflow.com/a/10530562
+ *
  * Created by soheb on 28/06/2015.
  */
 public class FrequentColourImage {
