@@ -4,7 +4,6 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +41,7 @@ public class ImageProcessor {
 
         Outputter out = new Outputter(cli);
 
-        out.write("Directories: " + StringUtils.join(Arrays.asList(args), ", "));
+        out.write("Directories: " + StringUtils.join(cli.getArgs(), ", "));
         out.write("------------------------------------------------------------");
         for (Map.Entry<File, String> entry : mainMap.entrySet()) {
             out.write(String.format("File: '%s'\tCommon Color (hex): %s", entry.getKey().getName(), entry.getValue()));
