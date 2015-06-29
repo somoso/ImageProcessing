@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.logging.Logger;
 
 /**
+ * Parses command line parameters and set internal flags
+ *
  * Created by soheb on 28/06/2015.
  */
 public class CliOptionsParser {
