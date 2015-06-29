@@ -19,7 +19,7 @@ public class Outputter {
     public Outputter(CliOptionsParser parser) {
         this.parser = parser;
         if (parser.getFileOutput() != null) {
-            file = new File(parser.getFileOutput());
+            file = new File(parser.getFileOutput().replaceFirst("^~", System.getProperty("user.home")));
         } else {
             file = null;
         }
@@ -29,9 +29,7 @@ public class Outputter {
         System.out.println(s);
         if (file != null) {
             try {
-                if (file.canWrite()) {
-                    FileUtils.writeLines(file, Arrays.asList(new String[]{s}), true);
-                }
+                FileUtils.writeLines(file, Arrays.asList(new String[]{s}), true);
             } catch (IOException e) {
                 parser.severe("Failed to write to file: " + e.getMessage());
             }
